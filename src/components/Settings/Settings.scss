@@ -1,0 +1,25 @@
+.settings-btn {
+  cursor: pointer;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: 35px;
+  height: 35px;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+
+    path {
+      fill: #feb221;
+    }
+  }
+
+  &:active {
+    transform: scale(1.1);
+
+    path {
+      fill: #feb221;
+    }
+  }
+}

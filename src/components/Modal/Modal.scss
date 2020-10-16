@@ -1,0 +1,73 @@
+.modal {
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    width: 50%;
+    height: 50%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.5);
+
+    &.open {
+      animation: open 0.3s ease-in;
+    }
+
+    .settings {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0.3rem;
+        padding-bottom: 0.7rem;
+        border-bottom: 1px solid #999;
+
+        h2 {
+          letter-spacing: 1px;
+        }
+
+        span {
+          cursor: pointer;
+          font-size: 2rem;
+          transition: all 0.2s;
+          color: #c0392b;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      &__config {
+        flex: 1;
+      }
+    }
+  }
+}
+
+@keyframes open {
+  from {
+    top: 0;
+    left: 50%;
+  }
+  to {
+    top: 50%;
+    left: 50%;
+  }
+}
