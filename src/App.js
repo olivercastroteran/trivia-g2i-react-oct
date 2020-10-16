@@ -1,11 +1,19 @@
 import React from 'react';
 import './App.scss';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Home, Quiz, Results } from './pages';
 
 function App() {
   return (
-    <div className="app">
-      <h1>Hello</h1>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/quiz" component={Quiz} />
+          <Route path="/results" component={Results} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
