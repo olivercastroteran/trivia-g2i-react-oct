@@ -28,7 +28,7 @@ const Card = () => {
         You will be presented with 10 True or False questions.
       </h2>
       <p className="card__challenge">Can you score 100%?</p>
-      <Link to="/quiz/1" className="card__btn" onClick={startGame}>
+      <Link to="/quiz/0" className="card__btn" onClick={startGame}>
         BEGIN
       </Link>
     </div>
