@@ -1,6 +1,9 @@
 const initState = {
   isOpen: false,
-  querySettings: {},
+  querySettings: {
+    difficulty: 'hard',
+    nOfQuestions: '10',
+  },
 };
 
 const settingsReducer = (state = initState, action) => {
