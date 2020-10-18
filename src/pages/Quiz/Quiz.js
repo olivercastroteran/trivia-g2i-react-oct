@@ -1,12 +1,14 @@
 import React from 'react';
 import Spinner from '../../components/Spinner/Spinner';
 import './Quiz.scss';
+import { useSelector } from 'react-redux';
 
 const Quiz = () => {
+  const questions = useSelector((state) => state.quiz.questions);
+
   return (
     <div className="quiz">
-      <h1>Quiz</h1>
-      <Spinner />
+      {questions.length === 0 ? <Spinner /> : <p>Quiz</p>}
     </div>
   );
 };
