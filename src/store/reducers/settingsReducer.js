@@ -18,6 +18,14 @@ const settingsReducer = (state = initState, action) => {
         ...state,
         querySettings: action.payload,
       };
+    case 'RESET_SETTINGS':
+      return {
+        isOpen: false,
+        querySettings: {
+          difficulty: 'hard',
+          nOfQuestions: '10',
+        },
+      };
     default:
       return state;
   }

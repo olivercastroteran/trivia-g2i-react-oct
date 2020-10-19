@@ -11,3 +11,9 @@ export const setSettings = (settings) => {
     payload: settings,
   };
 };
+
+export const resetSettings = (settings) => {
+  return {
+    type: 'RESET_SETTINGS',
+  };
+};

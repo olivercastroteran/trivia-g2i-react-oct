@@ -37,4 +37,23 @@ $color-primary: #10334a;
       margin-bottom: 1rem;
     }
   }
+
+  &__resume {
+    ul {
+      list-style: none;
+    }
+
+    li {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+      text-align: left;
+
+      span {
+        margin: 0 0.5rem;
+        color: #555;
+      }
+    }
+  }
 }
