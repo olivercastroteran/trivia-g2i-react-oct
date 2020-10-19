@@ -11,9 +11,10 @@ const quizReducer = (state = initState, action) => {
         questions: action.payload,
       };
     case 'SET_ANSWERS':
+      let newAnswers = [...state.answers, action.payload];
       return {
         ...state,
-        answers: action.payload,
+        answers: newAnswers,
       };
     default:
       return state;

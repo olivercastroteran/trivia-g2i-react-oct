@@ -5,7 +5,7 @@ export const getQuiz = (quiz) => {
   };
 };
 
-export const setAnswers = (answer) => {
+export const setAnswer = (answer) => {
   return {
     type: 'SET_ANSWERS',
     payload: answer,
