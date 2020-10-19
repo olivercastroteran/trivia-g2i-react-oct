@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Home, Quiz, Results } from './pages';
+import { Home, Quiz, Results, NotFound } from './pages';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/quiz/:question" component={Quiz} />
           <Route path="/results" component={Results} />
+          <Route component={NotFound} />
         </Switch>
       </div>
     </BrowserRouter>

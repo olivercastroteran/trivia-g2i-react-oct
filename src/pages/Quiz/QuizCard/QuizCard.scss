@@ -12,6 +12,14 @@ $color-primary: #10334a;
   justify-content: space-between;
   box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.5);
 
+  @media (max-width: 769px) {
+    width: 70%;
+  }
+
+  @media (max-width: 480px) {
+    width: 90%;
+  }
+
   & > * {
     text-align: center;
     color: #333;
@@ -32,6 +40,7 @@ $color-primary: #10334a;
     padding: 1rem;
     border: 1px solid #156454;
     border-radius: 0.5rem;
+    color: #555;
   }
 
   &__progress {

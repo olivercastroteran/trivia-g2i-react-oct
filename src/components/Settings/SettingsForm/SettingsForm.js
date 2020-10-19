@@ -8,6 +8,7 @@ import {
 
 const SettingsForm = () => {
   const isOpen = useSelector((state) => state.settings.isOpen);
+  const querySettings = useSelector((state) => state.settings.querySettings);
   const [difficulty, setDifficulty] = useState('hard');
   const [nOfQuestions, setnOfQuestions] = useState('10');
   const dispatch = useDispatch();
@@ -32,7 +33,10 @@ const SettingsForm = () => {
     <form onSubmit={handleSubmit} className="form">
       <div className="form__input">
         <label>Difficulty</label>
-        <select defaultValue={difficulty} onChange={handleDifficulty}>
+        <select
+          defaultValue={querySettings?.difficulty}
+          onChange={handleDifficulty}
+        >
           <option value="easy">Easy</option>
           <option value="medium">Medium</option>
           <option value="hard">Hard</option>
@@ -41,7 +45,10 @@ const SettingsForm = () => {
 
       <div className="form__input">
         <label>N&deg; of questions</label>
-        <select defaultValue={nOfQuestions} onChange={handleQuestions}>
+        <select
+          defaultValue={querySettings?.nOfQuestions}
+          onChange={handleQuestions}
+        >
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>

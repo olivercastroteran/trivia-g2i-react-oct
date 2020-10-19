@@ -8,6 +8,11 @@
   transition: all 0.3s;
   z-index: 1;
 
+  @media (max-width: 480px) {
+    top: 1rem;
+    right: 1rem;
+  }
+
   &:hover {
     transform: scale(1.2);
 
