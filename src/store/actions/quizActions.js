@@ -11,3 +11,9 @@ export const setAnswer = (answer) => {
     payload: answer,
   };
 };
+
+export const reset = () => {
+  return {
+    type: 'RESET_GAME',
+  };
+};

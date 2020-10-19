@@ -16,6 +16,11 @@ const quizReducer = (state = initState, action) => {
         ...state,
         answers: newAnswers,
       };
+    case 'RESET_GAME':
+      return {
+        questions: [],
+        answers: [],
+      };
     default:
       return state;
   }
