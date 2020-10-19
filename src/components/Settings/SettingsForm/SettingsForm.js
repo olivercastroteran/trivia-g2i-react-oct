@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import './SettingsForm.scss';
-import { useDispatch } from 'react-redux';
-import { setSettings } from '../../../store/actions/settingsActions';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  setSettings,
+  toggleSettings,
+} from '../../../store/actions/settingsActions';
 
 const SettingsForm = () => {
+  const isOpen = useSelector((state) => state.settings.isOpen);
   const [difficulty, setDifficulty] = useState('hard');
   const [nOfQuestions, setnOfQuestions] = useState('10');
   const dispatch = useDispatch();
@@ -11,6 +15,9 @@ const SettingsForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(setSettings({ difficulty, nOfQuestions }));
+    setTimeout(() => {
+      dispatch(toggleSettings(!isOpen));
+    }, 250);
   };
 
   const handleDifficulty = (e) => {

@@ -6,6 +6,7 @@
   width: 35px;
   height: 35px;
   transition: all 0.3s;
+  z-index: 1;
 
   &:hover {
     transform: scale(1.2);
