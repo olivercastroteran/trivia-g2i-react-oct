@@ -6,6 +6,7 @@ const Button = ({ type, click, question }) => {
     <button
       className={type === 'True' ? 'booleanBtn true' : 'booleanBtn false'}
       onClick={(e) => click({ type, question })}
+      data-test={type === 'True' ? 'booleanBtn true' : 'booleanBtn false'}
     >
       {type}
     </button>
